@@ -3599,7 +3599,7 @@ public:
 
         bool CanAIAttack(Unit const* target) const override
         {
-            return IsValidPlatformTarget(target) && !target->GetVehicle();
+            return IsValidPlatformTarget(target) && !target->GetVehicle() && target->GetTypeId() == TYPEID_PLAYER;
         }
     };
 
